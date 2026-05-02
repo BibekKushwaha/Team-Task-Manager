@@ -1,0 +1,97 @@
+.filters {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.filters .form-select {
+  min-width: 160px;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.taskRow {
+  padding: var(--space-5) var(--space-6);
+  animation: fadeInUp 0.3s ease-out backwards;
+  transition: all var(--transition-fast);
+}
+.taskRow:hover {
+  transform: translateX(4px);
+}
+
+.overdueRow {
+  border-left: 3px solid var(--accent-rose);
+}
+
+.taskMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.taskInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.taskTitle {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.taskMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.projectLink {
+  font-size: var(--font-size-xs);
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.projectLink:hover { color: var(--accent-primary-hover); }
+
+.dueBadge {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.overdueBadge {
+  font-size: var(--font-size-xs);
+  color: var(--accent-rose);
+  font-weight: 600;
+}
+
+.taskBadges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.statusSelect {
+  font-size: var(--font-size-xs) !important;
+  padding: var(--space-2) var(--space-3) !important;
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .taskMain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .taskBadges {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
