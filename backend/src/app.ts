@@ -15,9 +15,20 @@ const app = express();
 
 // Security middleware
 app.use(helmet());
+const allowedOrigins = [
+  "http://localhost:3000",
+  env.FRONTEND_URL
+];
+
 app.use(
   cors({
-    origin: env.FRONTEND_URL,
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS blocked"));
+      }
+    },
     credentials: true,
   })
 );
