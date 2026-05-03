@@ -40,7 +40,7 @@ export default function SignupPage() {
       <div className={styles.bgOrb2} />
       <div className={styles.authCard}>
         <div className={styles.authHeader}>
-          <div className={styles.logoIcon}>⚡</div>
+          <div className={styles.logoIcon}>T</div>
           <h1 className={styles.authTitle}>Create Account</h1>
           <p className={styles.authSubtitle}>Join TaskFlow and start managing tasks</p>
         </div>

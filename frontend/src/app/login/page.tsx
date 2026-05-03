@@ -34,7 +34,7 @@ export default function LoginPage() {
       <div className={styles.bgOrb2} />
       <div className={styles.authCard}>
         <div className={styles.authHeader}>
-          <div className={styles.logoIcon}>⚡</div>
+          <div className={styles.logoIcon}>T</div>
           <h1 className={styles.authTitle}>Welcome Back</h1>
           <p className={styles.authSubtitle}>Sign in to continue to TaskFlow</p>
         </div>
